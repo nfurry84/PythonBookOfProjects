@@ -4,7 +4,7 @@ import os
 def print_hi(name):
     """print hi says hello to input parameter"""
     print(f'Hi there, {name}')
-    conf = os.environ.get('MY_GLOBAL_APP_VARIABLE')
+    conf = os.environ.get('MY_GLOBAL_APP_VARIABLE') #osnow
     secret_value = os.environ.get('MY_SECRET')
     print(f'Config: {conf}')
     print(f'Secret: {secret_value}')
