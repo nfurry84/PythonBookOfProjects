@@ -5,5 +5,4 @@ def print_hi(name):
 
 
 if __name__ == '__main__':
-    """directly run module"""
     print_hi('PyCharm')
