@@ -1,4 +1,6 @@
 """This is a hello world style script"""
+import os
+
 def print_hi(name):
     """print hi says hello to input parameter"""
     print(f'Hi there, {name}')
