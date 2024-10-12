@@ -7,5 +7,5 @@ def test_mytest():
 
 def test_main_values():
     """Test main values output"""
-    assert main.config == ''
-    assert main.key == ''
+    assert main.CONF != ''
+    assert main.KEY != ''
