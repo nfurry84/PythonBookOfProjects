@@ -1,3 +1,4 @@
+"""This is a hello world style script"""
 def print_hi(name):
     """print hi says hello to input parameter"""
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
