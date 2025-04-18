@@ -1,0 +1,153 @@
+name: Task
+description: A scoped task for implementation, refactoring, or operational work
+title: "[Task] <Short descriptive title>"
+labels: ["type: task"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Summary
+        Please provide a short, clear description of the task.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: e.g., Refactor the authentication middleware to support multiple schemes.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## User Story  
+        _Use the standard format:_
+
+        _As a `<role>`, I want `<goal>`, so that `<benefit>`._
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      placeholder: e.g., As a developer, I want the login system to support SSO so that users can sign in with their corporate credentials.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Security Requirements
+
+  - type: checkboxes
+    id: security-checks
+    attributes:
+      label: Security Validation Checklist
+      options:
+        - label: Authentication method verified
+        - label: Authorization rules documented and enforced
+        - label: Sensitive data handling reviewed (e.g., encryption, PII)
+        - label: Audit logging implemented where applicable
+        - label: Input validation / sanitization in place
+        - label: External dependencies reviewed (e.g., CVE scan)
+
+  - type: textarea
+    id: security-notes
+    attributes:
+      label: Additional Security Requirements or Notes
+      placeholder: e.g., Must pass OWASP ZAP scan; must comply with NIST 800-53 control AC-3.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Proposed Implementation  
+        Provide the high-level approach and affected components.
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation Plan
+      placeholder: |
+        - Code location(s): /services/auth/
+        - Components impacted: Auth middleware, User service
+        - Estimated effort: 2-3 dev days
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Validation & Testing
+
+  - type: checkboxes
+    id: testing
+    attributes:
+      label: What types of validation will be included?
+      options:
+        - label: Unit Tests
+        - label: Integration Tests
+        - label: Peer Review
+        - label: Static Code Analysis
+        - label: Security Scan (e.g., Snyk, ZAP)
+
+  - type: checkboxes
+    id: non-prod-environments
+    attributes:
+      label: Non-Production Testing Environments
+      options:
+        - label: Development
+        - label: QA / Functional Test
+        - label: UAT / Staging
+        - label: Security Test
+
+  - type: textarea
+    id: special-testing
+    attributes:
+      label: Any special test data or credentials required?
+      placeholder: e.g., Use testuser@test.com with Admin role for role-based validation
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Dependencies / Blockers
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies or Blockers
+      placeholder: e.g., Depends on feature branch `oauth-support` being merged.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Acceptance Criteria
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - Auth system supports both SSO and password logins
+        - All tests passing in CI/CD pipeline
+        - Security scan reports zero critical issues
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Additional Notes
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Context or Attachments
+      placeholder: Diagrams, links, screenshots, or external references
+    validations:
+      required: false
